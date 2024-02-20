@@ -1,20 +1,10 @@
-var computerSelection = Math.floor(Math.random() * 3);
-function getComputerChoice(){
-    if (computerSelection == 0) {
-       computerSelection = "paper";
-    } else if (computerSelection == 1) {
-       computerSelection = "scissors";
-    } else if (computerSelection == 2) {
-      computerSelection = "rock";
-    }
-}
-console.log("The computer chose " + computerSelection);
+const computerSelection = Math.floor(Math.random() * 3)
+    if (computerSelection < 1) 
+       console.log("Rock");
+    else if (computerSelection < 2) 
+        console.log("Paper");
+    else 
+       console.log("Scissors");
 const playerSelection = "rock";
 console.log("I chose " + playerSelection);
-
-
-
-
-
-//function playRound(playerSelection, computerSelection) {}
 
