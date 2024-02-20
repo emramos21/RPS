@@ -9,9 +9,13 @@ function getComputerChoice() {
 };
 getComputerChoice()
 
-
-
-
-//function playerSelection () {
-    const playerSelection = "rock";
-    console.log("I chose " + playerSelection);
+function getPlayerSelection () {
+    let playerSelection = prompt("Choose a number: (1) Rock, (2) Paper, (3) Scissors");
+    if (playerSelection == 1)
+        console.log("Me: Rock")
+    else if (playerSelection == 2)
+        console.log("Me: Paper")
+    else (playerSelection == 3)
+        console.log("Me: Scissors")
+}
+getPlayerSelection();
