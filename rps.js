@@ -1,16 +1,6 @@
 function getComputerChoice() {
-    const computerSelection = Math.floor(Math.random() * 3)
-    console.log("computer" + computerSelection)
-    if (computerSelection < 1)
-        computerSelection === 'rock'
-        //console.log('rock');}
-    else if (computerSelection < 2)
-        computerSelection === 'paper'
-        //console.log('paper');}
-    else
-        computerSelection === 'scissors'
-        //console.log('scissors');}
-    console.log(computerSelection)
+    const computerSelection = ["Rock", "Paper", "Scissors"]
+    console.log(randomChoice = computerSelection[Math.floor(Math.random() * computerSelection.length)])
 };
 //getComputerChoice();
 
