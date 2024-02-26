@@ -1,34 +1,35 @@
-//function getComputerChoice() {
 let choice = ['Rock', 'Paper', 'Scissors']
-
 function play() {
     playRound();
 }
 function playRound() {
     const playerSelection = getPlayerSelection()
     const computerSelection = getComputerSelection()
+    const winner = checkWinner(playerSelection, computerSelection)
+    console.log(winner);
 }
 function getPlayerSelection () {
     const input = prompt("Choose rock, paper, scissors")
-    //if (playerSelection === 'paper' || playerSelection === 'rock' || playerSelection === 'scissors')
-      //  console.log("you chose " + playerSelection)
-    //else 
-      //  console.log("error")
-   console.log(input)
+    //return input;
+    console.log(input)
+    return input;
 };
 function getComputerSelection(){
-    const cinput = choice[Math.floor(Math.random() * choice.length)]
-    console.log("computer chose " + cinput)
+    return choice[Math.floor(Math.random() * choice.length)]
 };
-
-//getComputerChoice();
-//getPlayerSelection();
-
-    //if (playerSelection === 'rock' && computerSelection === 'paper' || playerSelection === 'rock' && computerSelection === 'scissors' || playerSelection === 'paper' && computerSelection === 'rock' || playerSelection === 'scissors' && computerSelection === 'paper')
-   //     console.log("you lose")
-    //else if (playerSelection === 'scissors' && computerSelection === 'rock' || playerSelection === 'rock' && computerSelection === 'paper' || playerSelection === 'paper' && computerSelection === 'scissors')
-     //   console.log("you win")
-    //else 
-      //  console.log("tie")
-    
+function checkWinner(playerC, compC) {
+    if (playerC === compC){
+        console.log("tie")
+        return "tie";
+    } else if(
+        (playerC === "rock" && compC === "scissors") || 
+        (playerC === 'paper' && compC === 'rock') || 
+        (playerC === 'scissors' && compC === 'paper')) {
+        console.log("you lose i win")
+        return "you lose i win"
+    } else {
+        console.log("you win")
+        return "you win"
+    }
+};
 play();
