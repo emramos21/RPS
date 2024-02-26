@@ -1,31 +1,29 @@
 function getComputerChoice() {
     const computerSelection = Math.floor(Math.random() * 3)
-    if (computerSelection < 1) 
-       console.log('rock');
-    else if (computerSelection < 2) 
-        console.log('paper');
-    else 
-       console.log('scissors');
+    console.log("computer" + computerSelection)
+    if (computerSelection < 1)
+        computerSelection === 'rock'
+        //console.log('rock');}
+    else if (computerSelection < 2)
+        computerSelection === 'paper'
+        //console.log('paper');}
+    else
+        computerSelection === 'scissors'
+        //console.log('scissors');}
+    console.log(computerSelection)
 };
-getComputerChoice();
+//getComputerChoice();
 
 function getPlayerSelection () {
-   let playerSelection = prompt("Choose a number: (1) Rock, (2) Paper, (3) Scissors")
-    if (playerSelection == 1)
-        console.log("rock")
-    else if (playerSelection == 2)
-        console.log("paper")
-    else 
-        console.log("scissors") 
+   let playerSelection = prompt("Choose rock, paper, scissors")
+    if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors")
+        console.log(playerSelection)
 };
-getPlayerSelection();
+//getPlayerSelection();
 
-//function playRound(computerSelection, playerSelection) {
-  //  if (playerSelection === computerSelection) 
-    //    console.log("Tie!")
-   // else if (playerSelection === 1 && computerSelection === 2) 
-     //   console.log("i win")
-   // if (playerSelection === 2 && computerSelection === 3) 
-     //   console.log("computer wins")
-    //}
-//playRound();
+function playRound(computerSelection, playerSelection) {
+    getComputerChoice(console.log("computer" + computerSelection));
+    getPlayerSelection();
+   // console.log("Computer " + computerSelection + " " + "Me " + playerSelection)
+    }
+playRound();
