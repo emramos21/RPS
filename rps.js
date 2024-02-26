@@ -1,19 +1,28 @@
 function getComputerChoice() {
-    const computerSelection = ["Rock", "Paper", "Scissors"]
-    console.log(randomChoice = computerSelection[Math.floor(Math.random() * computerSelection.length)])
+    let choice = ["Rock", "Paper", "Scissors"]
+    let computerSelection = choice[Math.floor(Math.random() * choice.length)]
+    //console.log("computer chose " + computerSelection)
 };
 //getComputerChoice();
 
 function getPlayerSelection () {
-   let playerSelection = prompt("Choose rock, paper, scissors")
-    if (playerSelection === "rock" || playerSelection === "paper" || playerSelection === "scissors")
-        console.log(playerSelection)
+   const playerSelection = prompt("Choose rock, paper, scissors")
+    if (playerSelection === "paper" || playerSelection === "rock" || playerSelection === "scissors")
+        console.log("you chose " + playerSelection)
+    else 
+        console.log("error")
+   //console.log(playerSelection)
 };
+//getComputerChoice();
 //getPlayerSelection();
+//const winner = playRound(getComputerChoice, getPlayerSelection);
 
 function playRound(computerSelection, playerSelection) {
-    getComputerChoice(console.log("computer" + computerSelection));
-    getPlayerSelection();
-   // console.log("Computer " + computerSelection + " " + "Me " + playerSelection)
-    }
+   // getComputerChoice();
+    //getPlayerSelection();
+    console.log("Computer " + computerSelection) 
+    console.log("Me " + playerSelection)
+}
+getComputerChoice();
+getPlayerSelection();
 playRound();
