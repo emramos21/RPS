@@ -1,14 +1,15 @@
 let choice = ['rock', 'paper', 'scissors']
-for (let i = 0; i < 4; i++) {
-    playGame()
-}
+const winners = [];
+
 function playGame() {
-    playRound();
+    for (let i = 0; i < 4; i++) {
+    playRound(); }
 }
 function playRound() {
     const playerSelection = getPlayerSelection()
     const computerSelection = getComputerSelection()
     const winner = checkWinner(playerSelection, computerSelection)
+    //const finalWinner = keepScore()
     console.log(winner);
 }
 function getPlayerSelection () {
@@ -20,7 +21,6 @@ function getComputerSelection(){
     computerSelection = choice[Math.floor(Math.random() * choice.length)]
     console.log("Computer chose " + computerSelection)
     return computerSelection;
-    
 };
 function checkWinner(playerSelection, computerSelection) {
     if (playerSelection === computerSelection){
@@ -35,4 +35,9 @@ function checkWinner(playerSelection, computerSelection) {
         return "computer wins"
     }
 };
+//function keepScore(checkWinner) {
+  //  if (checkWinner)
+//};
 playGame();
+
+
