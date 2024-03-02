@@ -1,5 +1,8 @@
 let choice = ['rock', 'paper', 'scissors']
-function play() {
+for (let i = 0; i < 4; i++) {
+    playGame()
+}
+function playGame() {
     playRound();
 }
 function playRound() {
@@ -32,4 +35,4 @@ function checkWinner(playerSelection, computerSelection) {
         return "computer wins"
     }
 };
-play();
+playGame();
