@@ -27,11 +27,11 @@ function checkWinner(playerSelection, computerSelection) {
         (playerSelection === "rock" && computerSelection === "scissors") || 
         (playerSelection === 'paper' && computerSelection === 'rock') || 
         (playerSelection === 'scissors' && computerSelection === 'paper')) {
-        console.log("you lose i win")
-        return "you lose i win"
+        console.log("i win")
+        return "i win"
     } else {
         //console.log("you win")
-        return "you win"
+        return "computer wins"
     }
 };
 play();
