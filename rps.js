@@ -27,10 +27,8 @@ function checkWinner(playerSelection, computerSelection) {
         (playerSelection === "rock" && computerSelection === "scissors") || 
         (playerSelection === 'paper' && computerSelection === 'rock') || 
         (playerSelection === 'scissors' && computerSelection === 'paper')) {
-        console.log("i win")
         return "i win"
     } else {
-        //console.log("you win")
         return "computer wins"
     }
 };
