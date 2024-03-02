@@ -2,29 +2,30 @@ let choice = ['rock', 'paper', 'scissors']
 const winners = [];
 
 function playGame() {
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 5; i++) {
     playRound(); }
+    keepScore();
 }
 function playRound() {
-    const playerSelection = getPlayerSelection()
-    const computerSelection = getComputerSelection()
-    const winner = checkWinner(playerSelection, computerSelection)
-    //const finalWinner = keepScore()
-    console.log(winner);
+    const playerSelection = getPlayerSelection();
+    const computerSelection = getComputerSelection();
+    const winner = checkWinner(playerSelection, computerSelection);
+    winners.push(winner);
+    //console.log(winner);
 }
 function getPlayerSelection () {
-    const input = prompt("Choose rock, paper, scissors")
-    console.log("I chose " + input)
+    const input = prompt("Choose rock, paper, scissors");
+    console.log("I chose " + input);
     return input;
 };
 function getComputerSelection(){
-    computerSelection = choice[Math.floor(Math.random() * choice.length)]
-    console.log("Computer chose " + computerSelection)
+    computerSelection = choice[Math.floor(Math.random() * choice.length)];
+    console.log("Computer chose " + computerSelection);
     return computerSelection;
 };
 function checkWinner(playerSelection, computerSelection) {
     if (playerSelection === computerSelection){
-        console.log("tie")
+        console.log("tie");
         return "tie";
     } else if(
         (playerSelection === "rock" && computerSelection === "scissors") || 
@@ -35,9 +36,9 @@ function checkWinner(playerSelection, computerSelection) {
         return "computer wins"
     }
 };
-//function keepScore(checkWinner) {
-  //  if (checkWinner)
-//};
+function keepScore() {
+  console.log(winners);
+};
 playGame();
 
 
