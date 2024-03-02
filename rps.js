@@ -1,4 +1,4 @@
-let choice = ['Rock', 'Paper', 'Scissors']
+let choice = ['rock', 'paper', 'scissors']
 function play() {
     playRound();
 }
@@ -10,25 +10,27 @@ function playRound() {
 }
 function getPlayerSelection () {
     const input = prompt("Choose rock, paper, scissors")
-    //return input;
-    console.log(input)
+    console.log("I chose " + input)
     return input;
 };
 function getComputerSelection(){
-    return choice[Math.floor(Math.random() * choice.length)]
+    computerSelection = choice[Math.floor(Math.random() * choice.length)]
+    console.log("Computer chose " + computerSelection)
+    return computerSelection;
+    
 };
-function checkWinner(playerC, compC) {
-    if (playerC === compC){
+function checkWinner(playerSelection, computerSelection) {
+    if (playerSelection === computerSelection){
         console.log("tie")
         return "tie";
     } else if(
-        (playerC === "rock" && compC === "scissors") || 
-        (playerC === 'paper' && compC === 'rock') || 
-        (playerC === 'scissors' && compC === 'paper')) {
+        (playerSelection === "rock" && computerSelection === "scissors") || 
+        (playerSelection === 'paper' && computerSelection === 'rock') || 
+        (playerSelection === 'scissors' && computerSelection === 'paper')) {
         console.log("you lose i win")
         return "you lose i win"
     } else {
-        console.log("you win")
+        //console.log("you win")
         return "you win"
     }
 };
