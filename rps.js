@@ -15,7 +15,8 @@ function playRound() {
     //return winner;
 }
 function getPlayerSelection () {
-    const input = prompt("Choose rock, paper, scissors");
+    //const input = prompt("Choose rock, paper, scissors");
+    const input = onclick;
     console.log("I chose " + input);
     return input;
 };
