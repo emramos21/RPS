@@ -3,6 +3,7 @@ const winners = [];
 //document.getElementById("start").addEventListener("click", playGame);
 function playGame() {
     //for (let i = 0; i < 5; i++) {
+    //getPlayerSelection();
     playRound(); 
     //}
     keepScore();
@@ -20,7 +21,8 @@ function getPlayerSelection () {
     buttons.forEach((button) => {
         button.addEventListener('click', () => {
             playerChoice = button.textContent;
-            console.log(playerChoice)
+            console.log(playerChoice);
+            getComputerSelection();
         });
     });
 };
