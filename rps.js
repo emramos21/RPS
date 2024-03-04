@@ -32,19 +32,18 @@ function checkWinner(playerSelection, computerSelection) {
         (playerSelection === "rock" && computerSelection === "scissors") || 
         (playerSelection === 'paper' && computerSelection === 'rock') || 
         (playerSelection === 'scissors' && computerSelection === 'paper')) {
-        return "i win"
+        return "i win";
     } else {
-        return "computer wins"
+        return "computer wins";
     }
 };
 function keepScore() {
-    let playerWins = winners.includes("i win");
-    let computerWins = winners.includes("computer wins");
-    let ties = winner.includes("tie");
-    console.log("player wins:" + playerWins);
-    console.log("computer wins:"+ computerWins);
-    console.log("ties:" + ties);
-    console.log(winners)
+    let playerWins = winners.filter((item) => item == "i win").length;
+    let computerWins = winners.filter((item) => item =="computer wins").length;
+    let ties = winners.filter((item) => item == "tie").length;
+    console.log("player wins: " + playerWins);
+    console.log("computer wins: "+ computerWins);
+    console.log("ties: " + ties);
 };
 playGame();
 
