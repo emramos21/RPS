@@ -19,6 +19,7 @@ function getPlayerSelection () {
     console.log("I chose " + input);
     return input;
 };
+
 function getComputerSelection(){
     computerSelection = choice[Math.floor(Math.random() * choice.length)];
     console.log("Computer chose " + computerSelection);
