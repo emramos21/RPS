@@ -1,10 +1,10 @@
 const choice = ["rock", "paper", "scissors"]
 const winners = [];
-
+//document.getElementById("start").addEventListener("click", playGame);
 function playGame() {
-    for (let i = 0; i < 5; i++) {
+    //for (let i = 0; i < 5; i++) {
     playRound(); 
-    }
+    //}
     keepScore();
 }
 function playRound() {
@@ -15,9 +15,12 @@ function playRound() {
     //return winner;
 }
 function getPlayerSelection () {
-    const input = prompt("Choose rock, paper, scissors");
-    console.log("I chose " + input);
-    return input;
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            alert(button.id);
+        });
+    });
 };
 function getComputerSelection(){
     computerSelection = choice[Math.floor(Math.random() * choice.length)];
