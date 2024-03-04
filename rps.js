@@ -2,9 +2,9 @@ const choice = ["rock", "paper", "scissors"]
 const winners = [];
 
 function playGame() {
-    for (let i = 0; i < 5; i++) {
+    //for (let i = 0; i < 5; i++) {
     playRound(); 
-    }
+    //s}
     keepScore();
 }
 function playRound() {
