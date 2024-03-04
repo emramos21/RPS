@@ -2,9 +2,9 @@ const choice = ["rock", "paper", "scissors"]
 const winners = [];
 document.getElementById("start").addEventListener("click", playGame);
 function playGame() {
-    //for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 5; i++) {
     playRound(); 
-    //s}
+    }
     keepScore();
 }
 function playRound() {
@@ -15,8 +15,8 @@ function playRound() {
     //return winner;
 }
 function getPlayerSelection () {
-    //const input = prompt("Choose rock, paper, scissors");
-    const input = onclick;
+    const input = prompt("Choose rock, paper, scissors");
+    //const input = onclick;
     console.log("I chose " + input);
     return input;
 };
