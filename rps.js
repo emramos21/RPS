@@ -1,6 +1,6 @@
 const choice = ["rock", "paper", "scissors"]
 const winners = [];
-document.getElementById("rock").addEventListener("click", playGame);
+document.getElementById("start").addEventListener("click", playGame);
 function playGame() {
     //for (let i = 0; i < 5; i++) {
     playRound(); 
