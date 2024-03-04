@@ -15,10 +15,12 @@ function playRound() {
     //return winner;
 }
 function getPlayerSelection () {
+    let playerChoice;
     const buttons = document.querySelectorAll('button');
     buttons.forEach((button) => {
         button.addEventListener('click', () => {
-            alert(button.id);
+            playerChoice = button.textContent;
+            console.log(playerChoice)
         });
     });
 };
