@@ -1,6 +1,6 @@
 const choice = ["rock", "paper", "scissors"]
 const winners = [];
-
+document.getElementById("rock").addEventListener("click", playGame);
 function playGame() {
     //for (let i = 0; i < 5; i++) {
     playRound(); 
@@ -19,7 +19,6 @@ function getPlayerSelection () {
     console.log("I chose " + input);
     return input;
 };
-
 function getComputerSelection(){
     computerSelection = choice[Math.floor(Math.random() * choice.length)];
     console.log("Computer chose " + computerSelection);
