@@ -49,5 +49,3 @@ function keepScore() {
     console.log("ties: " + ties);
 };
 playGame();
-
-
