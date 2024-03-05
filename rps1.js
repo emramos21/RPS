@@ -2,13 +2,12 @@ const choice = ["rock", "paper", "scissors"]
 //const winners = [];
 const playerDisplay = document.getElementById("playerDisplay");
 const computerDisplay = document.getElementById("computerDisplay");
-//const playerScore = document.getElementById("playerScore");
+const playerScore = document.getElementById("playerScore");
 const resultDisplay = document.getElementById("result");
 
 function playGame(playerChoice) {
     computerSelection = choice[Math.floor(Math.random() * choice.length)];
     console.log("Computer chose " + computerSelection);
-    //console.log("me" + playerDisplay)
     let result = " ";
     if (playerChoice === computerSelection){
         console.log("tie");
@@ -28,6 +27,6 @@ function playGame(playerChoice) {
 }
 playerDisplay.textContent = `Player Chose: ${playerChoice}`;
 computerDisplay.textContent = `Computer Chose: ${computerSelection}`;
-resultDisplay.textContent = `Score: ${result}`;
+resultDisplay.textContent = `Result: ${result}`;
     }
 playGame();
