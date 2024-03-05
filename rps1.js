@@ -26,8 +26,8 @@ function playGame(playerChoice) {
                 break;
     }
 }
-playerDisplay.textContent = `player: ${playerChoice}`;
-computerDisplay.textContent = `player: ${computerSelection}`;
-resultDisplay.textContent = `player: ${result}`;
+playerDisplay.textContent = `Player Chose: ${playerChoice}`;
+computerDisplay.textContent = `Computer Chose: ${computerSelection}`;
+resultDisplay.textContent = `Score: ${result}`;
     }
 playGame();
