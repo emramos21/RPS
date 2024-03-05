@@ -3,10 +3,9 @@ const winners = [];
 //document.getElementById("start").addEventListener("click", playGame);
 function playGame() {
     //for (let i = 0; i < 5; i++) {
-    //getPlayerSelection();
     playRound(); 
     //}
-    keepScore();
+    //keepScore();
 }
 function playRound() {
     const playerSelection = getPlayerSelection();
@@ -16,13 +15,14 @@ function playRound() {
     //return winner;
 }
 function getPlayerSelection () {
-    let playerChoice;
+    let playerSelection;
     const buttons = document.querySelectorAll('button');
     buttons.forEach((button) => {
         button.addEventListener('click', () => {
-            playerChoice = button.textContent;
-            console.log(playerChoice);
+            playerSelection = button.textContent;
+            console.log(playerSelection);
             getComputerSelection();
+            checkWinner();
         });
     });
 };
@@ -53,3 +53,4 @@ function keepScore() {
     console.log("ties: " + ties);
 };
 playGame();
+
