@@ -5,14 +5,17 @@
         </head>
     <body>
         <h1>Rock, Paper, Scissors</h1>
-        <!--<button id="start">Start Game</button>-->
-        <button id="rock">rock</button>
-        <button id="paper">paper</button>
-        <button id="scissors">scissors</button>
-        <script src="rps1.js"></script>
+        <div id="choices">
+            <button onclick="playGame()">rock</button>
+            <button onclick="playGame()">paper</button>
+            <button onclick="playGame()">scissors</button>
+        </div>
+        
         <p id="player chose">Player Chose: </p>
         <p id="computer chose">Computer Chose: </p>
         <p id="player score">Player Score: </p>
         <p id="computer score">Computer Score: </p>
+
+        <script src="rps1.js"></script>
     </body>
 </html>
