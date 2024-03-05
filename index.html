@@ -4,9 +4,7 @@
         <title>RPS</title>
         </head>
     <body>
-        <body style="background-color: #ff1d58";></body>
-            <h1 style="color:antiquewhite; font-size: 100px; align-items: center;">Rock, Paper, Scissors.</h1>
-
+        <h1 style="font-size: 100px; align-items: center;">Rock, Paper, Scissors.</h1>
         <div id="choices">
             <button onclick="playGame('rock')"><img src="https://preview.redd.it/pd0luds1uwt91.png?auto=webp&s=52e5f1ee0b1748163216df6efcb5e23635e85e38" 
                 style="width:80px;height:100px;"></button>
@@ -16,28 +14,24 @@
                 style="width:80px;height:100px;"></button>
         </div>
         <style>
-            #choices {
-                background-color:#f75990 ;
+            body {
+                background-color: #ff1d58;
+                background: linear-gradient(#ff1d58,#fff685,#00DDFF, #0049B7);
             }
             #playerDisplay {
                 font-size: 30px;
-                background-color:#fff685;
             }
             #computerDisplay {
                 font-size: 30px;
-                background-color: #fff685;
             }
             #result {
                 font-size: 30px;
-                background-color: #00DDFF;
             }
             #playerScoreDisplay {
                 font-size: 30px;
-                background-color: #00DDFF;
             }
             #computerScoreDisplay {
                 font-size: 30px;
-                background-color: #0049B7;
             }
         </style>
         <p id="playerDisplay">Player Chose: </p>
